@@ -1,0 +1,23 @@
+
+===== EXP A: fix W1, recover {W2,W3,beta} (10 scenarios) =====
+  TRUE   W=[1, 10.0, 0.01, 0.5]  beta=0.5
+  FIXED-W1 recovered: W1=10.470 (pinned)  W2=0.00191  W3=0.3872  beta=0.5606
+  -> W3 err vs true 0.5: 0.1128   W2 err vs 0.01: 0.0081
+
+===== EXP B: JOINT lw1 x lw3 heatmap (10 scenarios) =====
+  joint heatmap saved; loss range 181.7..31469.1
+
+===== EXP C: does a heading signal break the W1-W3 tie? =====
+  auto heading weight w_head = 0.284 (equalises avg stencil variation)
+  [position-only] eigenvalues=[4103.6, 624.6, 553.4, 119.3]  cond=34.4
+       dir1 lam=  4103.6  lw1:-0.07  lw2:+0.07  lw3:-0.12  beta:-0.99
+       dir2 lam=   624.6  lw1:+0.56  lw2:-0.07  lw3:-0.82  beta:+0.06
+       dir3 lam=   553.4  lw1:-0.82  lw2:-0.08  lw3:-0.55  beta:+0.12
+       dir4 lam=   119.3  lw1:-0.02  lw2:+0.99  lw3:-0.10  beta:+0.09
+       W1-W3 mixing index (mid dirs) = 0.457  (lower = more separated)
+  [position+heading] eigenvalues=[6038.6, 1362.4, 937.7, 195.8]  cond=30.8
+       dir1 lam=  6038.6  lw1:-0.14  lw2:+0.10  lw3:-0.15  beta:-0.97
+       dir2 lam=  1362.4  lw1:+0.99  lw2:+0.04  lw3:-0.02  beta:-0.13
+       dir3 lam=   937.7  lw1:-0.00  lw2:-0.11  lw3:-0.98  beta:+0.14
+       dir4 lam=   195.8  lw1:+0.03  lw2:-0.99  lw3:+0.10  beta:-0.12
+       W1-W3 mixing index (mid dirs) = 0.012  (lower = more separated)
