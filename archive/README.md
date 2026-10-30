@@ -36,7 +36,7 @@ Also in this stretch: dt 0.1 → 0.05 → 0.01, and W_CTRL 0.5 → 0.1 → 0.
 | `BO_chamfer.py` | chamfer trajectory distance instead of padding | May 26 |
 | `generate_dataset.py` | side try: dataset of (W, alpha) → rollouts for amortized IRL | – |
 
-## 4. MPPI planner (May 26 – Jul 20) - `../mppi/`
+## 4. MPPI planner (May 26 - August 20) - `../mppi/`
 
 These all live in `BO_MPPI_SVGP.py`, which was edited in place, so only the
 final version exists (scheduler + length-scale sampling + UCB). The stages
@@ -52,13 +52,9 @@ below are from the July 20 deck.
 8. Deterministic closed-form per-cell CVaR (`CVAR_MODE`), ~5× faster.
 9. Joint recovery across scenarios (`BO_MPPI_joint.py`), 10 and 15 scenarios, plus `repro_study.py`.
 
-## 5. Shared map + scaling scenarios (Oct 15) - `../mppi/`
+## 5. Shared map + scaling scenarios (August 20- Oct 15) - `../mppi/`
 
 - One shared risk map for every scenario; only start/goal change.
 - 10 / 15 / 20 scenarios × 3 runs (`joint_scenario_experiment.py`, `joint_scenario_repro.py`).
 - `sensitivity_study.py` checks what actually moves the path.
 
-## 6. Since Oct 15 - `../mppi/`
-
-`identifiability.py`, `value_function.py`, `value_planner_cost.py`,
-`tier2_experiments.py` (+ `make_expC_fig.py`). Not in a deck yet.
